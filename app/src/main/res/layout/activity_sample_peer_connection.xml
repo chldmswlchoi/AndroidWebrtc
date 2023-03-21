@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context = ".tutorial.CompleteActivity"
+        android:orientation="vertical"
+        >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/host"
+                >
+
+                <org.webrtc.SurfaceViewRenderer
+                    android:id="@+id/host_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    />
+
+                <ImageView
+                    android:id="@+id/rotate"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="top|end"
+                    android:background="@drawable/rotate"
+                    android:backgroundTint="@android:color/white" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/remote_view_group"
+                android:visibility="gone"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <org.webrtc.SurfaceViewRenderer
+                        android:id="@+id/surface_view1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        />
+
+
+
+                    <org.webrtc.SurfaceViewRenderer
+                        android:id="@+id/surface_view2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        />
+
+                    <org.webrtc.SurfaceViewRenderer
+                        android:id="@+id/surface_view3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        <LinearLayout
+            android:background="#2AFF9800"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+
+            >
+
+            <ImageView
+                android:id="@+id/mute"
+                android:layout_marginEnd="30dp"
+                android:layout_width="47dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/mike"
+                />
+
+
+            <ImageView
+                android:id="@+id/endCall"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/disconnect"
+                />
+
+
+            <ImageView
+                android:id="@+id/noVideo"
+                android:layout_marginStart="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/video"
+                />
+
+        </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+</layout>
